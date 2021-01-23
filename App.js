@@ -27,32 +27,16 @@ const Profile = () => {
           marginTop:10
           }} />
         <Text 
-          style={{ 
-                  backgroundColor: '#3498db', 
-                  color:'white', width: 200, 
-                  fontSize:19,
-                  marginLeft:20
-                }}>
-          Habib Akbar Ramdhani
-        </Text>
-        <Text 
           style={StyleSheet.text}>
-          26 Tahun
+          Habib Akbar Ramdhanii
         </Text>
+        <Text style={StyleSheet.text}>26 Tahun</Text>
 
         </View>
   );
 };
 
-const styles = StyleSheet.create({
-  text: {
-    backgroundColor: '#3498db', 
-    color:'white', 
-    width: 200, 
-    fontSize:20,
-    marginLeft:20 
-  }
-})
+
 
 class ProfileKucing extends Component{
   render(){
@@ -65,20 +49,11 @@ class ProfileKucing extends Component{
                   marginTop: 10
                   }} />
          <Text 
-            style={{ 
-                    backgroundColor: '#666888', 
-                    color:'white', width: 100, 
-                    fontSize:20
-                  }}>
-            Bambang
+            style={StyleSheet.text}>
+            Bambangg
           </Text>
           <Text 
-            style={{ 
-              backgroundColor: '#666888', 
-              color:'white', 
-              width: 100, 
-              fontSize:20 
-              }}>
+            style={StyleSheet.text}>
             21 Tahun
           </Text>
 
@@ -86,5 +61,15 @@ class ProfileKucing extends Component{
     )
   }
 }
+
+const styles = StyleSheet.create({
+  text: {
+    backgroundColor: '#3498db', 
+    color:'white', 
+    width: 200, 
+    fontSize:20,
+    marginLeft:20 
+  }
+})
 
 export default App;
