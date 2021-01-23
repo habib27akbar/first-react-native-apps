@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {Image, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
+import photoGw from './photo-gw.jpeg';
 const App = () => {
   return (
     <View>
@@ -16,11 +17,14 @@ const Profile = () => {
   return (
     <View>
         <Image 
-        source={{ uri: 'http://placeimg.com/640/480/tech' }} 
+        source={ photoGw } 
         style={{ 
           width: 200, 
           height: 200,
-          marginLeft:20
+          marginLeft:20,
+          borderWidth:2,
+          borderColor:'#3498db',
+          marginTop:10
           }} />
         <Text 
           style={{ 
@@ -32,19 +36,23 @@ const Profile = () => {
           Habib Akbar Ramdhani
         </Text>
         <Text 
-          style={{ 
-            backgroundColor: '#3498db', 
-            color:'white', 
-            width: 200, 
-            fontSize:20,
-            marginLeft:20 
-            }}>
+          style={StyleSheet.text}>
           26 Tahun
         </Text>
 
         </View>
   );
 };
+
+const styles = StyleSheet.create({
+  text: {
+    backgroundColor: '#3498db', 
+    color:'white', 
+    width: 200, 
+    fontSize:20,
+    marginLeft:20 
+  }
+})
 
 class ProfileKucing extends Component{
   render(){
