@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {View, Text, Image} from 'react-native';
-import photoGw from './photo-gw.jpeg';
+import photoGw from '../../assets/images/photo-gw.jpeg';
 class FlexBox extends Component{
     render(){
         return (

@@ -1,17 +1,17 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import photoGw from './photo-gw.jpeg';
+import photoGw from '../../assets/images/photo-gw.jpeg';
 const Profile = () => {
     return (
       <View>
           <Image 
           source={ photoGw } 
-          style={StyleSheet.image} />
+          style={styles.image} />
           <Text 
-            style={StyleSheet.text}>
+            style={styles.text}>
             Habib Akbar Ramdhani
           </Text>
-          <Text style={StyleSheet.text}>26 Tahun</Text>
+          <Text style={styles.text}>26 Tahun</Text>
   
           </View>
     );
