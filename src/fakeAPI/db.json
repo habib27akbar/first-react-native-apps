@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "habib",
+      "email": "akbarca",
+      "bidang": "php"
+    },
+    {
+      "name": "akbar",
+      "email": "akbarca94@gmail.com",
+      "bidang": "html",
+      "id": 2
+    }
+  ]
+}

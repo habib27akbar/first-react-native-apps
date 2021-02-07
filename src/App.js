@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {View} from 'react-native';
 //import CallAPIAxios from './pages/CallAPIAxios';
 //import Profile from './Profile';
 //import FlexBox from './pages/FlexBox';
@@ -7,7 +7,8 @@ import {Image, StyleSheet, Text, View} from 'react-native';
 //import StateDinamis from './pages/StateDinamis';
 //import RnSvg from './pages/RnSvg';
 //import CallAPIVanilla from './pages/CallAPIVanilla';
-import CallAPIAxios from './pages/CallAPIAxios';
+//import CallAPIAxios from './pages/CallAPIAxios';
+import Crud from './pages/Crud';
 const App = () => {
   return (
     <View>
@@ -17,7 +18,8 @@ const App = () => {
       {/* <StateDinamis/> */}
       {/* <RnSvg/> */}
      {/* <CallAPIVanilla/> */}
-     <CallAPIAxios />
+     {/* <CallAPIAxios /> */}
+     <Crud/>
     </View>
     
   );
