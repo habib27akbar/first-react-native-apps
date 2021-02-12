@@ -47,7 +47,8 @@ const Crud = () => {
   }
 
   const getData = () => {
-    axios.get('http://10.0.2.2:3004/users')
+    const newLocal = 'http://10.0.2.2:3004/users';
+    axios.get(newLocal)
     .then(res => {
       console.log('respon :', res)
       setUser(res.data);
