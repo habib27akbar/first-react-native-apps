@@ -1,16 +1,20 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { View, Text, StyleSheet, TextInput, Button, Image } from 'react-native'
-import FotoGw from '../../assets/images/photo-gw.jpeg'
+//import FotoGw from '../../assets/images/photo-gw.jpeg'
+//import Avatar from "baseui/avatar"
+//import avatar from 'adorable-avatars';
+import Avatar from 'react-native-user-avatar';
 
-const Item = () => {
+const Item = ({name, email, bidang}) => {
   return(
       <View style={styles.itemContainer}>
-          <Image source={ FotoGw } style={styles.avatar}/>
+          {/* <Image source={ FotoGw } style={styles.avatar}/> */}
+          <Avatar name={name} style={styles.avatar}/>
           <View style={styles.desc}>
-            <Text style={styles.descName}>Nama Lengkap</Text>
-            <Text style={styles.descEmail}>Email</Text>
-            <Text style={styles.descBidang}>Bidang</Text>
+            <Text style={styles.descName}>{name}</Text>
+            <Text style={styles.descEmail}>{email}</Text>
+            <Text style={styles.descBidang}>{bidang}</Text>
           </View>
           <Text style={styles.delete}>X</Text>
       </View>
@@ -21,6 +25,10 @@ const Crud = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [bidang, setBidang] = useState("");
+  const [user, setUser] = useState([]);
+  useEffect (() => {
+      getData();
+  }, []);
 
   const submit = () => {
     const data = {
@@ -37,6 +45,14 @@ const Crud = () => {
       setBidang("");
     })
   }
+
+  const getData = () => {
+    axios.get('http://10.0.2.2:3004/users')
+    .then(res => {
+      console.log('respon :', res)
+      setUser(res.data);
+    })
+  }
     return(
         <View style={styles.container}>
             <Text style={styles.text}>CRUD</Text>
@@ -46,9 +62,11 @@ const Crud = () => {
             <TextInput style={styles.input} placeholder="Bidang" value={bidang} onChangeText={(value) => setBidang(value)}/>
             <Button title="Simpan" onPress={submit}/>
             <View style={styles.lines}/>
-            <Item/>
-            <Item/>
-            <Item/>
+            {user.map (user => {
+              return <Item name={user.name} email={user.email} bidang={user.bidang}/> 
+            })}
+            
+            
         </View>
     )
 }
