@@ -1,10 +1,10 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "habib",
-      "email": "akbarca",
-      "bidang": "php"
+      "name": "habib akbar ramdhani",
+      "email": "akbarca@gmail.com",
+      "bidang": "php dev",
+      "id": 1
     },
     {
       "name": "akbar",
